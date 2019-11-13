@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+ <web-app>
+     <display-name>practice serialization</display-name>
+     <servlet>
+         <servlet-name>serialize</servlet-name>
+         <servlet-class>com.practiceCode.Serialize</servlet-class>
+     </servlet>
+     <servlet>
+         <servlet-name>deserialize</servlet-name>
+         <servlet-class>com.practiceCode.Deserialize</servlet-class>
+     </servlet>
+     <servlet>
+        <servlet-name>HttpDeserialize</servlet-name>
+        <servlet-class>com.practiceCode.HTTPDeserialize</servlet-class>
+    </servlet>
+    <servlet>
+       <servlet-name>HttpSerialize</servlet-name>
+       <servlet-class>com.practiceCode.HTTPSerialize</servlet-class>
+   </servlet>
+     <servlet-mapping>
+         <servlet-name>serialize</servlet-name>
+         <url-pattern>/serialize</url-pattern>
+     </servlet-mapping>
+     <servlet-mapping>
+         <servlet-name>deserialize</servlet-name>
+         <url-pattern>/deserialize</url-pattern>
+     </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>HttpDeserialize</servlet-name>
+        <url-pattern>/postdeserialize</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+       <servlet-name>HttpSerialize</servlet-name>
+       <url-pattern>/postserialize</url-pattern>
+   </servlet-mapping>
+     <welcome-file-list>
+         <welcome-file>static/index.html</welcome-file>
+     </welcome-file-list>
+ </web-app>
